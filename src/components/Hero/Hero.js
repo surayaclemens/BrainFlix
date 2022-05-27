@@ -1,5 +1,11 @@
-import './HeroVideo.scss'
-function HeroVideo(props) {
+import React from 'react';
+import './Hero.scss'
+import EyeIcon from "../../assets/images/views.svg";
+import LikeIcon from "../../assets/images/likes.svg";
+
+
+
+function Hero() {
 // write function stuff in here
 
 // in the return is where your jsx/html type stuff goes
@@ -13,9 +19,9 @@ function HeroVideo(props) {
                         <p className='metadata__date'>***dynamically fill with date***</p>
                     </div>
                     <div className='metadata__counters'>
-                        <img className='metadata__counters-icon' src='' alt='views icon'/>
+                        <img className='metadata__counters-icon' src={EyeIcon} alt='views icon'/>
                         <p className=''>***dynamically fill with view counter??***</p>
-                        <img className='metadata__counters-icon' src='' alt='likes icon'/>
+                        <img className='metadata__counters-icon' src={LikeIcon} alt='likes icon'/>
                         <p className=''>***dynamically fill with like counter??***</p>
                     </div>
             </div>

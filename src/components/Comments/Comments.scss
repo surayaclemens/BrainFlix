@@ -1,0 +1,62 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+
+
+.comments {
+
+
+
+&__head {
+
+}
+
+&__form {
+
+
+}
+
+&__form-avatar {
+    @include avatar;
+}
+
+&__form-input {
+
+}
+
+&__form-button {
+
+}
+
+&__container {
+
+}
+}
+
+.single-comment {
+
+
+    &__avatar {
+        @include avatar;
+
+    }
+
+    &__info {
+
+    }
+
+    &__username {
+
+    }
+
+    &__date {
+
+    }
+
+    &__text {
+
+    }
+
+}

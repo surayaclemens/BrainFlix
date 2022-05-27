@@ -1,7 +1,7 @@
 import React from 'react';
 import './VideoList.scss';
 
-function VideoList(props) {
+function VideoList() {
 // write function stuff in here
 
 // in the return is where your jsx/html type stuff goes

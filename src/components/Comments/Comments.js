@@ -3,7 +3,7 @@ import './Comments.scss';
 import UserAvatar from "../../assets/images/Mohan-muruge.jpg";
 import CommentIcon from "../../assets/images/add_comment.svg";
 
-function Comments (){
+function Comments ({currentVideo}){
     // write function stuff in here
     
     // in the return is where your jsx/html type stuff goes
@@ -21,10 +21,10 @@ function Comments (){
                     <div className='single-comment'>
                         <img className='single-comment__avatar' src='' alt='user avatar'/>
                         <div className='single-comment__info'>
-                            <h3 className='single-comment__username'></h3>
-                            <p className='single-comment__date'></p>
+                            <h3 className='single-comment__username'>Fill with name from array</h3>
+                            <p className='single-comment__date'>Fill with date from array</p>
                         </div>
-                        <p className='single-comment__text'></p>
+                        <p className='single-comment__text'>Fill with comment from array</p>
                     </div>
                 </div>
                 

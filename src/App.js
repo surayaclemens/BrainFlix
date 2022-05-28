@@ -10,23 +10,23 @@ import videoDetails from './data/video-details.json';
 class App extends React.Component {
 
   state = {
-    currentVideo: videoDetails[0].id,
-    nextVideos: videoDetails
+    currentVideo: videoDetails[0],
+    nextVideos: VideoList
   }
 
-  handleChangeVideo = (id) => {
-    this.setState({
-        currentVideo: id
-    })
-  }
+  // handleChangeVideo = (id) => {
+  //   this.setState({
+  //       currentVideo: id
+  //   })
+  // }
 
   render(){
   return (
     <div className="App">
      <Header />
-     <Hero />
+     <Hero currentVideo={this.state.currentVideo}/>
      <Comments />
-     <VideoList />
+     <VideoList nextVideos={this.state.nextVideos}/>
     </div>
   );
 }

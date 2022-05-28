@@ -1,10 +1,10 @@
 import React from 'react';
 import './NextVideos.scss';
+// import NextVideos from './components/NextVideos/NextVideos';
 
 function NextVideos({nextVideos}) {
 // write function stuff in here
 
-// in the return is where your jsx/html type stuff goes
     return (
         <section className='videos'>
             <h2 className='videos__header'>Next Videos</h2>
@@ -13,6 +13,7 @@ function NextVideos({nextVideos}) {
                             return (
                                 // something must be missing with my key
                                 <li className='single-video' key={video.id}>
+                                  
                                     <img className='single-video__thumbnail' src={nextVideos.image} alt='video thumbnail'/>
                                     <div className='single-video__thumb-text'>
                                         <p className='single-video__title'>{nextVideos.title}</p>
@@ -25,7 +26,6 @@ function NextVideos({nextVideos}) {
         </section>
     )
 }
-
 
 export default NextVideos;
 

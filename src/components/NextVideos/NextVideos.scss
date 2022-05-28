@@ -1,0 +1,29 @@
+.videos{
+    border: 1px solid blue;
+
+&__header{
+
+}
+
+&__list{
+    border: 2px solid magenta;
+    list-style-type: none;
+}
+}
+
+.single-video {
+
+&__thumbnail{
+    width: 200px;
+    height: auto;
+}
+&__thumb-text{
+
+}
+&__title{
+
+}
+&__creator{
+
+}
+}

@@ -1,17 +1,23 @@
+// GLOBAL STUFF
 import React from 'react';
 import './App.scss';
+
+// COMPONENTS
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Comments from './components/Comments/Comments';
-import VideoList from './components/VideoList/VideoList';
+import NextVideos from './components/NextVideos/NextVideos';
+
+// DATA
 import videoDetails from './data/video-details.json';
+import videoList from './data/videos.json';
 
 
 class App extends React.Component {
 
   state = {
     currentVideo: videoDetails[0],
-    nextVideos: VideoList
+    nextVideos: videoList
   }
 
   // handleChangeVideo = (id) => {
@@ -26,7 +32,7 @@ class App extends React.Component {
      <Header />
      <Hero currentVideo={this.state.currentVideo}/>
      <Comments />
-     <VideoList nextVideos={this.state.nextVideos}/>
+     <NextVideos nextVideos={this.state.nextVideos}/>
     </div>
   );
 }

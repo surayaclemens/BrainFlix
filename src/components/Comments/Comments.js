@@ -13,7 +13,7 @@ function Comments ({currentVideo}){
                 <h2 className='comments__head'>Join the conversation</h2>
                 <form className='comments__form'>
                     <img className='comments__form-avatar' src={UserAvatar} alt='user avatar'/>
-                    <input className="comments__form-input" name="comments" type="text" id="comments" placeholder="Add a new comment"></input>
+                    <textarea className="comments__textarea" name="comments" type="text" id="comments" placeholder="Add a new comment"></textarea>
                     <a><img className="comments__form-button" src={CommentIcon} alt='upload button'/></a>
                 </form>
                 {/* data for comments coming from comments property of the main-video object stored in state */}

@@ -5,12 +5,9 @@ import LikeIcon from "../../assets/images/likes.svg";
 
 
 function Hero({currentVideo}) {
-// write function stuff in here
-
-// in the return is where your jsx/html type stuff goes
     return (
         <section className='hero'>
-            <video className='hero__video' poster={currentVideo.image}>
+            <video className='hero__video' controls poster={currentVideo.image}>
             </video>
             <h1 className='hero__title'>{currentVideo.title}</h1>
             <div className='hero__metadata'>
@@ -20,9 +17,9 @@ function Hero({currentVideo}) {
                     </div>
                     <div className='metadata__counters'>
                         <img className='metadata__counters-icon' src={EyeIcon} alt='views icon'/>
-                        <p className=''>{currentVideo.views}</p>
+                        <p className='metadata__body'>{currentVideo.views}</p>
                         <img className='metadata__counters-icon' src={LikeIcon} alt='likes icon'/>
-                        <p className=''>{currentVideo.likes}</p>
+                        <p className='metadata__body'>{currentVideo.likes}</p>
                     </div>
             </div>
             <p className='hero__video-description'>{currentVideo.description}</p>

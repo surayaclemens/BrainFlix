@@ -8,20 +8,20 @@ function NextVideos({nextVideos, changeVideo}) {
         <section className='videos'>
             <h2 className='videos__header'>Next Videos</h2>
             <ul className='videos__list'>
-            {nextVideos.map((video,i) => {
+            {nextVideos.map((video) => {
                             return (
-                                <li 
+                                <div
                                 className='single-video' 
                                 key={video.id}
-                                onClick={() => changeVideo(video.id)}
+                                onClick={() => {changeVideo(video.id)}}
                                 >
                 
-                                    <img className='single-video__thumbnail' src={nextVideos[i].image} alt='video thumbnail'/>
+                                    <img className='single-video__thumbnail' src={video.image} alt='video thumbnail'/>
                                     <div className='single-video__thumb-text'>
-                                        <p className='single-video__title'>{nextVideos[i].title}</p>
-                                        <p className='single-video__creator'>{nextVideos[i].channel}</p>
+                                        <p className='single-video__title'>{video.title}</p>
+                                        <p className='single-video__creator'>{video.channel}</p>
                                     </div>                      
-                                </li> 
+                                </div> 
                             )
                         })}               
             </ul>

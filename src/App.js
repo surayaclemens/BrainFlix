@@ -20,22 +20,38 @@ class App extends React.Component {
     nextVideos: videoList
   }
 
-  // handleChangeVideo = (id) => {
-  //   this.setState({
-  //       currentVideo: id
-  //   })
-  // }
+  // how to target the new video I want
+  handleChangeVideo = (id) => {
+    this.setState({
+      ...this.state,
+      currentVideo:this.state.videoDetails.find((video) => video.id ===id)
+      
+        // currentVideo: id
+    })
+  }
 
   render(){
   return (
     <div className="App">
      <Header />
-     <Hero currentVideo={this.state.currentVideo}/>
+
+     <Hero 
+     currentVideo={this.state.currentVideo}
+     />
+
      <Comments />
-     <NextVideos nextVideos={this.state.nextVideos}/>
+
+     <NextVideos 
+     nextVideos={this.state.nextVideos.filter(video => video.id !== this.state.currentVideo.id)}
+     changeVideo={this.handleChangeVideo}
+     />
+
     </div>
-  );
+  )
 }
 }
+
+// CONSOLE LOG FOR TESTING
+// console.log(videoList);
 
 export default App;

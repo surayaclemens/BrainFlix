@@ -2,22 +2,24 @@ import React from 'react';
 import './NextVideos.scss';
 // import NextVideos from './components/NextVideos/NextVideos';
 
-function NextVideos({nextVideos}) {
-// write function stuff in here
+function NextVideos({nextVideos, changeVideo}) {
 
     return (
         <section className='videos'>
             <h2 className='videos__header'>Next Videos</h2>
             <ul className='videos__list'>
-            {nextVideos.map(video => {
+            {nextVideos.map((video,i) => {
                             return (
-                                // something must be missing with my key
-                                <li className='single-video' key={video.id}>
-                                  
-                                    <img className='single-video__thumbnail' src={nextVideos.image} alt='video thumbnail'/>
+                                <li 
+                                className='single-video' 
+                                key={video.id}
+                                onClick={() => changeVideo(video.id)}
+                                >
+                
+                                    <img className='single-video__thumbnail' src={nextVideos[i].image} alt='video thumbnail'/>
                                     <div className='single-video__thumb-text'>
-                                        <p className='single-video__title'>{nextVideos.title}</p>
-                                        <p className='single-video__creator'>{nextVideos.channel}</p>
+                                        <p className='single-video__title'>{nextVideos[i].title}</p>
+                                        <p className='single-video__creator'>{nextVideos[i].channel}</p>
                                     </div>                      
                                 </li> 
                             )
@@ -28,25 +30,5 @@ function NextVideos({nextVideos}) {
 }
 
 export default NextVideos;
-
-
-// before I tried to script it
-// return (
-//     <section className='videos'>
-//         <h2 className='videos__header'>Next Videos</h2>
-//         <ul className='videos__list'>
-//             <li className='single-video'>
-//                 <img className='single-video__thumbnail' src={nextVideos[1].image} alt='video thumbnail'/>
-//                 <div className='single-video__thumb-text'>
-//                     <p className='single-video__title'>{nextVideos[1].title}</p>
-//                     <p className='single-video__creator'>{nextVideos[1].channel}</p>
-//                 </div>
-                   
-//             </li>
-//         </ul>
-//     </section>
-// )
-// 
-
 
                         

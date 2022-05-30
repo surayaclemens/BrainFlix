@@ -1,30 +1,65 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
 .videos{
-    border: 1px solid blue;
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-&__header{
+    &__header{
+        @include mob-h3;
+        margin: 1rem;
+    }
 
-}
-
-&__list{
-    border: 2px solid magenta;
-    list-style-type: none;
-}
+    &__list{
+        // border: 2px solid magenta;
+        list-style-type: none;
+        margin: 0 0 .5rem 1rem;
+        width: 90%;
+    }
 }
 
 .single-video {
-    border: 1px solid greenyellow;
+    display: flex;
+    margin-bottom: .5rem;
+    @include tablet {
+        margin-bottom: 1rem;
+    }
+  
 
-&__thumbnail{
-    width: 200px;
-    height: auto;
-}
-&__thumb-text{
+    &__thumbnail{
+        width: 7rem;
+        height: 4rem;
+        overflow: hidden;
+        background-color: $mercury;
+        border-radius: 4px;
+    }
 
-}
-&__title{
+    &__thumb-text{
+        // border: 1px solid greenyellow;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-left: 1rem;
+    
+    }
 
-}
-&__creator{
+    &__title{
+        @include mob-h2;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: left;
+        width: 10rem;
+        margin: .5rem 0;
+    }
 
-}
+    &__creator{
+        @include mob-body;
+        margin: .5rem 0;
+    }
 }

@@ -5,6 +5,7 @@ import './App.scss';
 // COMPONENTS
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
+import HeroInfo from './components/HeroInfo/HeroInfo';
 import Comments from './components/Comments/Comments';
 import NextVideos from './components/NextVideos/NextVideos';
 
@@ -12,9 +13,9 @@ import NextVideos from './components/NextVideos/NextVideos';
 import videoDetails from './data/video-details.json';
 import videoList from './data/videos.json';
 
-
 class App extends React.Component {
 
+// STATE - has access to videoDetails full array, the first object for default, nextVideo array
   state = {
     videoDetails,
     currentVideo: videoDetails[0],
@@ -29,25 +30,28 @@ handleChangeVideo = (id) => {
   })
 }
 
-
+// RENDERING ALL COMPONENTS ONTO PAGE
   render(){
   return (
     <div className="App">
      <Header />
-
-
      <Hero 
      currentVideo={this.state.currentVideo}
      />
-
+     <div className='container'>
+       <div className='second-container'>
+     <HeroInfo 
+     currentVideo={this.state.currentVideo}
+     />
      <Comments 
      currentVideo={this.state.currentVideo}
      />
-
+     </div>
      <NextVideos 
      nextVideos={this.state.nextVideos.filter(video => video.id !== this.state.currentVideo.id)}
      changeVideo={this.handleChangeVideo}
      />
+     </div>
 
     </div>
   )

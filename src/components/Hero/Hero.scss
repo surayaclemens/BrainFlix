@@ -1,37 +1,113 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+ 
+ 
  .hero {
+    &__background {
+        @include tablet{
+            background-color: black;
+        }
+    }
     &__video {
-        width: 90%;
+        width: 100%;
         height: auto;
-        border: 1px solid grey;
+        @include tablet{
+            width: 90%;
+        }
     }
-    &__title {
-        
+ }
+//     &__title {
+//         text-align: left;
+//         margin: 1rem;
+//         @include mob-h1;
+//         @include tablet {
+//             margin: 1.5rem 0 0 2rem;
+//         }
+//     }
+//     &__metadata {
+//         border-top: 1px solid $mercury;
+//         border-bottom: 1px solid $mercury;
+//         display: flex;
+//         justify-content: space-between;
+//         margin: 1rem;
+//         @include tablet{
+//             border-top: none;
+//             margin: 0 0 0 2rem;
+//         }
+//     }
+//     &__video-description {
+//         text-align: left;
+//         margin: 1rem;
+//         @include mob-body;
+//         @include tablet {
+//             margin: 1.5rem 0 0 2rem;
+//         }
+//     }
+//     &__comments-posted {
+//         text-align: left;
+//         margin: 1rem;
+//         @include mob-h2;
+//     } 
+// }
 
-    }
-    &__metadata {
+// .metadata {
+//     // border: 1px solid magenta;
+//     margin-right: 3rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     @include tablet{
+//         flex-direction: row;
+//         width: 10rem;
+//         justify-content: space-between;
 
-    }
+//     }
 
-    &__video-description {
+//     &__user {
+//         // border: 1px solid turquoise;
+//         @include mob-h2;
+//     }
 
-    }
-    &__comments-posted {
+//     &__date {
+//         // border: 1px solid turquoise;
+//         @include mob-body;
+//         color: $silver;
+//     }
 
-    } 
-    }
+//     &__counters {
+//         // border: 1px solid goldenrod;
+//         margin-right: 2rem;
+//         @include mob-body;
+//         color: $silver;
+//         display: flex;
+//         flex-direction: column;
+//         @include tablet{
+//             flex-direction: row;
+//             width: 12rem;
+//         }
+//     }
 
-.metadata {
+//     &__counters-box {
+//         display: flex;
+//         flex-direction: row;
+//         // border: 1px solid red;
+//         margin-top: 1rem;
+//         @include tablet{
+           
+//         }
+//     }
+
+//     &__counters-icon {
+//         margin-right: .5rem;
+//         width: 20px;
+//         height: 20px;
     
-    &__user {
-    
-    }
-    &__date {
-         }
-    &__counters {
-    
-    }
-    &__counters-icon {
-    
-    }
+//     }
 
-}
+//     &__body {
+//         margin: 0;
+//     }
+
+// }

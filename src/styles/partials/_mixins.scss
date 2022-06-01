@@ -19,6 +19,7 @@
     font-size: 2.063rem;
     line-height: 2.75rem;
     font-weight: 700;
+
 }
 
 @mixin td-h2 {
@@ -43,6 +44,7 @@
 @mixin labels-buttons {
     font-size: 0.75rem;
     line-height: 1.25rem;
+    font-family: 'Avenir';
     font-weight: 700;
     text-transform: uppercase;
     color: $white;
@@ -54,6 +56,7 @@
     background-position: 8px 8px;
     width: 90%;
     margin-top: 1rem;
+    
 }
 
 
@@ -62,12 +65,14 @@
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
+    font-family: 'Avenir';
 }
 
 @mixin mob-h2 {
     font-size: .813rem;
     line-height: 1.25rem;
     font-weight: 700;
+    font-family: 'Avenir';
 }
 
 @mixin mob-h3 {
@@ -76,17 +81,20 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $silver;
+    font-family: 'Avenir';
 }
 
 @mixin mob-body {
     font-size: 0.813rem;
     line-height: 1.125rem;
     font-weight: 400;
+    font-family: 'Avenir';
 }
 
 @mixin avatar {
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    font-family: 'Avenir';
 }
 

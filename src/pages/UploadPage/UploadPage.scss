@@ -1,0 +1,125 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+
+.upload{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid $mercury;
+   
+    
+
+    &__header{
+        @include mob-h1;
+        margin: 1.5rem 0 .5rem 1rem;
+        @include tablet {
+            width: 90%;
+            border-bottom: 1px solid $mercury;
+            padding-bottom: 1rem;
+            margin-left: 2rem;
+        }
+   
+    }
+
+    &__subheader{
+        @include mob-h2;
+        color: $silver;
+        text-transform: uppercase;
+        margin: 1rem 0 0.25rem 1rem;
+        @include tablet {
+            margin-left: 2rem;
+        }
+    }
+
+    &__subheader-form{
+        @include mob-h2;
+        color: $silver;
+        text-transform: uppercase;
+        margin: 1rem 0 0.25rem 0;
+        @include tablet {
+            margin-left: 1rem;
+        }
+    }
+
+    &__thumbnail{
+        width: 90%;
+        height: auto;
+        border-radius: 4px;
+        margin-left: 1rem;
+        @include tablet {
+            width: 50%;
+            margin-left: 2rem;
+        }
+    }
+
+    &__form{
+        margin-left: 1rem;
+        width: 90%;
+
+    }
+
+    &__title-input{
+        font-family: Avenir;
+        width: 90%;
+        height: 1rem;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        padding: .75rem;
+        &::placeholder{
+        color: $brainflix-black;
+        }
+        @include tablet {
+            height: 1rem;
+            width: 60%;
+            margin: 0 1rem;
+        }
+        @include desktop {
+            width: 70%;
+        }
+    }
+
+    &__description-input{
+        font-family: Avenir;
+        width: 90%;
+        height: 5rem;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        padding: .75rem;
+        &::placeholder{
+        color: $brainflix-black;
+        }
+        @include tablet {
+            height: 1rem;
+            width: 60%;
+            margin: 0 1rem;
+        }
+        @include desktop {
+            width: 70%;
+        }
+
+    }
+
+    &__button{
+        @include labels-buttons;
+        width: 100%;
+        background-image: url(../../assets/images/publish.svg);
+        @include tablet {
+            width: 25%;
+            
+        }
+    }
+
+    &__button-cancel{
+        @include labels-buttons;
+        width: 100%;
+        background-color: $white;
+        color: $brainflix-blue;
+        margin: 2rem 0 2rem 0;
+    }
+
+}

@@ -19,8 +19,10 @@ function UploadPage() {
                 <input className='upload__title-input' name="title-input" type="text" id='title-input' placeholder='Add a title to your video'></input>
                 <h2 className='upload__subheader-form'>Add a video description</h2>
                 <textarea className="upload__description-input" name="description-input" type="text" id="description-input" placeholder="Add a description to your video"></textarea>
-                <button className="upload__button">Publish</button>
-                <button className="upload__button-cancel">Cancel</button>
+                <div className='buttons'>
+                    <button className="buttons__publish">Publish</button>
+                    <button className="buttons__cancel">Cancel</button>
+                </div>
             </form>
 
 

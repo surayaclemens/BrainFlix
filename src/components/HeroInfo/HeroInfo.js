@@ -30,7 +30,7 @@ function HeroInfo({currentVideo}) {
                     </div>
             </div>
             <p className='hero__video-description'>{currentVideo.description}</p>
-            <p className='hero__comments-posted'>{currentVideo.comments.length} Comments</p>
+            <p className='hero__comments-posted'>{!currentVideo.comments ?"" : currentVideo.comments.length} Comments</p>
         </>
     )
 }

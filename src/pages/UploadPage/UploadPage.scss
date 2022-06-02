@@ -16,6 +16,7 @@
         @include mob-h1;
         margin: 1.5rem 0 .5rem 1rem;
         @include tablet {
+            @include td-h1;
             width: 90%;
             border-bottom: 1px solid $mercury;
             padding-bottom: 1rem;
@@ -58,6 +59,9 @@
     &__form{
         margin-left: 1rem;
         width: 90%;
+        @include tablet {
+            width: 94%;
+        }
 
     }
 
@@ -74,7 +78,7 @@
         }
         @include tablet {
             height: 1rem;
-            width: 60%;
+            width: 94%;
             margin: 0 1rem;
         }
         @include desktop {
@@ -94,8 +98,8 @@
         color: $brainflix-black;
         }
         @include tablet {
-            height: 1rem;
-            width: 60%;
+            height: 4rem;
+            width: 94%;
             margin: 0 1rem;
         }
         @include desktop {
@@ -103,23 +107,40 @@
         }
 
     }
+}
 
-    &__button{
-        @include labels-buttons;
-        width: 100%;
-        background-image: url(../../assets/images/publish.svg);
+.buttons{
+        display: flex;
+        flex-direction: column;
         @include tablet {
-            width: 25%;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: baseline;
+            border-top: 1px solid $mercury;
+            margin-top: 1rem;
             
         }
+        &__publish{
+            @include labels-buttons;
+            width: 100%;
+            background-image: url(../../assets/images/publish.svg);
+            @include tablet {
+                width: 25%;
+                
+                
+            }
+        }
+        &__cancel{
+            @include labels-buttons;
+            width: 100%;
+            background-color: $white;
+            color: $brainflix-blue;
+            margin: 1.5rem 0 1.5rem 0;
+            @include tablet {
+                width: 30%;
+            }
+        }
+        
     }
 
-    &__button-cancel{
-        @include labels-buttons;
-        width: 100%;
-        background-color: $white;
-        color: $brainflix-blue;
-        margin: 2rem 0 2rem 0;
-    }
 
-}

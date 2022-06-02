@@ -18,7 +18,7 @@ function Comments ({currentVideo}){
                 </form>
           
 {/* making a container of comments. map through the detailed video array, for each comment object return a single comment container that has an image and takes props for name, comment, likes, timestamp. defined in other component file called SingleComment */}
-                    {currentVideo.comments.map((comment) => {
+                    {!currentVideo.comments ? "" : currentVideo.comments.map((comment) => {
                         let unixTime = comment.timestamp
                         let commentDate = (parseInt(unixTime));
                         let formattedDate = new Date(commentDate).toLocaleDateString();

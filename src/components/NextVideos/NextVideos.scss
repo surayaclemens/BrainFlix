@@ -30,6 +30,14 @@
     }
   
 
+    &__link {
+        text-decoration: none;
+        color: $brainflix-black;
+        &:visited{
+            color: $brainflix-black;
+        }
+    }
+
     &__thumbnail{
         width: 7rem;
         height: 4rem;

@@ -22,7 +22,7 @@ class HomePage extends React.Component {
     state = {
     currentVideo: {},
     nextVideos: [],
-  }
+  };
 
 // LIFECYCLE AND AXIOS
 // using mount because want it to show up like this initially
@@ -32,6 +32,7 @@ componentDidMount() {
 // have to do this first so we have all video data, then can use just the first one for currentVideo
   axios.get(videosURL+apiKey)
       .then(response => {
+      // console.log(response.data);
       this.setState({
             nextVideos: response.data
           })
@@ -41,20 +42,36 @@ componentDidMount() {
 // then set the state of the current video to that one
   axios.get(videosURL+defaultVideo+apiKey)
     .then(response => {
+      // console.log(response.data);
     this.setState({
           currentVideo: response.data
       })
+      console.log(this.props);
     })
   })
 }
 
-// HANDLER TO CHANGE VIDEO ON CLICK - needs to be reworked to dynamic route
-handleChangeVideo = (id) => {
-  let heroVideo = this.state.videoDetails.find(video  => video.id === id) 
-  this.setState ({
-    currentVideo: heroVideo
-  })
+// GETTING STATE TO UPDATE TO NEW VID
+componentDidUpdate(prevProps) {
+  const clickedVideoID = this.props.match.params.videoID;
+  const previousVideoID = prevProps.match.params.videoID;
+
+  // these are showing undefined
+    console.log(clickedVideoID);
+    console.log(previousVideoID);
+
+if (clickedVideoID !== previousVideoID) {
+  axios.get(videosURL+clickedVideoID+apiKey)
+    .then(response => {
+      // console.log(response)
+      this.setState({
+        currentVideo: response.data
+      })
+    })
 }
+
+}
+
 
 // RENDERING ALL COMPONENTS ONTO PAGE
   render(){
@@ -76,7 +93,7 @@ handleChangeVideo = (id) => {
       </div>
      <NextVideos 
      nextVideos={this.state.nextVideos.filter(video => video.id !== this.state.currentVideo.id)}
-     changeVideo={this.handleChangeVideo}
+    //  changeVideo={this.handleChangeVideo}
      />
      </div>
 
@@ -86,3 +103,5 @@ handleChangeVideo = (id) => {
 }
 
 export default HomePage;
+
+

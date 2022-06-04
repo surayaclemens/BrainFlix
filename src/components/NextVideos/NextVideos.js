@@ -29,5 +29,3 @@ function NextVideos({nextVideos}) {
 }
 
 export default NextVideos;
-
-                        // onClick={() => {changeVideo(video.id)}}

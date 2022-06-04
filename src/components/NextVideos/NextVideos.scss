@@ -12,12 +12,16 @@
     &__header{
         @include mob-h3;
         margin: 1rem;
+        border-top: 1px solid $mercury;
+        width: 100%;
+        text-align: left;
+        padding-top: 1rem;
     }
 
     &__list{
-        // border: 2px solid magenta;
+        border: 2px solid magenta;
         list-style-type: none;
-        margin: 0 0 .5rem 1rem;
+        margin: 0 0 .5rem 0rem;
         width: 90%;
     }
 }
@@ -25,6 +29,8 @@
 .single-video {
     display: flex;
     margin-bottom: .5rem;
+    margin-left: 1rem;
+    width: 100%;
     @include tablet {
         margin-bottom: 1rem;
     }
@@ -32,6 +38,7 @@
 
     &__link {
         text-decoration: none;
+        width: 7rem;
         color: $brainflix-black;
         &:visited{
             color: $brainflix-black;
@@ -52,7 +59,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        margin-left: 1rem;
+        // margin-left: 1rem;
     
     }
 
@@ -61,6 +68,9 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        line-clamp: 2;
+        // display: -webkit-box;
+        -webkit-box-orient: block-axis;
         text-align: left;
         width: 10rem;
         margin: .5rem 0;

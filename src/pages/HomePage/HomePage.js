@@ -67,19 +67,6 @@ componentDidUpdate() {
         .catch(error => console.error(error))
       }
     
-
-
-  // condition to make video change
-    // if (clickedVideoID !== previousVideoID) {
-    //   axios.get(videosURL+clickedVideoID+apiKey)
-    //     .then(response => {
-    //       // console.log(response)
-    //       this.setState({
-    //         currentVideo: response.data
-    //       })
-    //     })
-    //     .catch(error => console.error(error))
-    //   }
 }
 
 

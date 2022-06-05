@@ -11,7 +11,9 @@ function NextVideos({nextVideos}) {
             <section className='videos__list'>
             {nextVideos.map((video) => {
                             return (
-                                <div className='single-video' key={video.id}>
+                                <div className='single-video' 
+                                key={video.id}
+                                >
                                     <Link to={"/video/"+video.id} className='single-video__link'>
                                         <img className='single-video__thumbnail' src={video.image} alt='video thumbnail'/> 
                                         <div className='single-video__thumb-text'>

@@ -9,7 +9,6 @@
 }
 
 .videos{
-    // border: 1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -32,7 +31,6 @@
     }
 
     &__list{
-        // border: 2px solid magenta;
         list-style-type: none;
         margin: 0 0 .5rem 0rem;
         width: 100%;
@@ -40,7 +38,6 @@
 }
 
 .single-video {
-    // border: 2px solid turquoise;
     margin-bottom: .5rem;
     margin-left: 1rem;
     width: 20rem;
@@ -48,10 +45,8 @@
         margin: 0 0 1rem 2rem;
 
     }
-  
 
     &__link {
-        // border: 1px solid blue;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -64,7 +59,6 @@
     }
 
     &__thumbnail{
-        // border: 2px solid green;
         width: 6.6rem;
         height: 3.8rem;
         overflow: hidden;
@@ -73,7 +67,6 @@
     }
 
     &__thumb-text{
-        // border: 2px solid greenyellow;
         display: flex;
         flex-direction: column;
         align-items: flex-start;

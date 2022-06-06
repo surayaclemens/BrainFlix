@@ -15,7 +15,6 @@ function UploadPage() {
       if (!title || !description) return alert("Please fill out all fields")
       if (title && description) {
           return alert("Upload successful!")
-        //   add a line here to get upload succesful boolean to run for redirect????
       }
   }
 

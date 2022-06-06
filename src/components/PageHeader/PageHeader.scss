@@ -23,15 +23,13 @@
         padding: 0 0 1rem 0;
         width: 85%;
     }
-    // border: .5px solid rebeccapurple;
 
     &__logo{
         margin-top: 1rem;
         order: 1;
         @include desktop {
             margin-left: 4rem;
-        }
-        
+        } 
     }
 
     &__searchbar{
@@ -61,8 +59,7 @@
         @include desktop {
             width: 20%;
             margin-left: 24rem;
-        }
-       
+        }  
     }
 
     &__upload-button{
@@ -78,13 +75,10 @@
         }
         @include desktop {
             width: 10rem;
-
         }
     }
-    
 
     &__upload-link{
-        // border: 1px solid red;
         display: flex;
         justify-content: center;
         text-decoration: none;
@@ -100,8 +94,6 @@
     &__user-avatar{
         @include avatar;
         order: 3;
-        margin-top: 1rem;
-        
+        margin-top: 1rem;   
     }
-
 }

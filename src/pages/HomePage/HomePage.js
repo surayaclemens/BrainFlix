@@ -2,7 +2,7 @@
 import React from 'react';
 import "./HomePage.scss";
 // COMPONENTS
-import Hero from "../../components/Hero/Hero"
+import HeroVideo from "../../components/HeroVideo/HeroVideo"
 import HeroInfo from '../../components/HeroInfo/HeroInfo';
 import Comments from '../../components/Comments/Comments';
 import NextVideos from '../../components/NextVideos/NextVideos';
@@ -74,9 +74,9 @@ componentDidUpdate() {
   render(){
     return (
       <div className="App">
-        <Hero currentVideo={this.state.currentVideo} />
-        <div className='container'>
-            <div className='second-container'>
+        <HeroVideo currentVideo={this.state.currentVideo} />
+        <div className='main-container'>
+            <div className='left-container'>
               <HeroInfo currentVideo={this.state.currentVideo} />
               <Comments currentVideo={this.state.currentVideo} />
             </div>

@@ -12,7 +12,7 @@ function Comments ({currentVideo}){
             <form className='form'>
                 <img className='form__avatar' src={UserAvatar} alt='user avatar'/>
                 <div className='form__actions'>
-                    <textarea className="form__textarea" name="comments" type="text" id="comments" placeholder="Add a new comment"></textarea>
+                    <textarea className="form__textarea" name="comments" type="text" placeholder="Add a new comment"></textarea>
                     <button className="form__button" src={CommentIcon} alt='upload button'>Comment</button>
                 </div>
             </form>
@@ -25,7 +25,7 @@ function Comments ({currentVideo}){
                 return (
                     <div className='single-comment'>
                         <div className='single-comment__info'>
-                            <img className='single-comment__avatar' src='' alt=''/>
+                            <div className='single-comment__avatar'></div>
                             <div className='single-comment__post'>
                                 <h3 className='single-comment__username'>{comment.name}</h3>
                                 <p className='single-comment__date'>{formattedDate}</p>

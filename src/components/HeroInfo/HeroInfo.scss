@@ -3,14 +3,22 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/typography' as *;
 
+* {
+    box-sizing: border-box;
+    font-family: 'Avenir';
+}
+
 .hero {
+    width: 100%;
     
 &__title {
     text-align: left;
     margin: 1rem;
     @include mob-h1;
+
     @include tablet {
         margin: 1.5rem 0 0 2rem;
+        width: 90%;
     }
     @include desktop {
         width: 90%;
@@ -28,7 +36,7 @@
         margin: 0 2rem 0 2rem;
     }
     @include desktop {
-        width: 90%;
+        width: 88.5%;
         margin-left: 6rem;
     }
 }
@@ -42,6 +50,8 @@
     @include desktop {
         width: 90%;
         margin-left: 6rem;
+        padding-right: 1rem;
+        @include td-body;
     }
 }
 &__comments-posted {
@@ -49,11 +59,12 @@
     margin: 1rem;
     @include mob-h2;
     @include tablet {
-        margin: 1.5rem 2rem 0 2rem;
+        margin: 1.5rem 0 0 2rem;
     }
     @include desktop {
         width: 90%;
         margin-left: 6rem;
+        @include td-h2;
     }
 } 
 }
@@ -85,6 +96,11 @@
             flex-direction: row;
             width: 12rem;           
         }
+        @include desktop{
+            width: 13rem;
+            padding-right: 1rem;
+        }
+        
     }
     &__counters-box {
         display: flex;
@@ -98,6 +114,7 @@
         margin-right: .5rem;
         width: 20px;
         height: 20px;
+        
     }
     &__body {
         margin: 0;

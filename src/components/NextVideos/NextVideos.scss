@@ -3,6 +3,11 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/typography' as *;
 
+* {
+    box-sizing: border-box;
+    font-family: 'Avenir';
+}
+
 .videos{
     // border: 1px solid blue;
     display: flex;
@@ -16,29 +21,42 @@
         width: 100%;
         text-align: left;
         padding-top: 1rem;
+        @include tablet {
+            width: 91.5%;
+            margin-left: 2rem;
+        }
+        @include desktop {
+            margin-left: 1.3rem;
+            border: none;
+        }
     }
 
     &__list{
-        border: 2px solid magenta;
+        // border: 2px solid magenta;
         list-style-type: none;
         margin: 0 0 .5rem 0rem;
-        width: 90%;
+        width: 100%;
     }
 }
 
 .single-video {
-    display: flex;
+    // border: 2px solid turquoise;
     margin-bottom: .5rem;
     margin-left: 1rem;
-    width: 100%;
+    width: 20rem;
     @include tablet {
-        margin-bottom: 1rem;
+        margin: 0 0 1rem 2rem;
+
     }
   
 
     &__link {
+        // border: 1px solid blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-decoration: none;
-        width: 7rem;
+        width: 20rem;
         color: $brainflix-black;
         &:visited{
             color: $brainflix-black;
@@ -46,20 +64,21 @@
     }
 
     &__thumbnail{
-        width: 7rem;
-        height: 4rem;
+        // border: 2px solid green;
+        width: 6.6rem;
+        height: 3.8rem;
         overflow: hidden;
         background-color: $mercury;
         border-radius: 4px;
     }
 
     &__thumb-text{
-        // border: 1px solid greenyellow;
+        // border: 2px solid greenyellow;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        // margin-left: 1rem;
+        width: 12rem;
     
     }
 
@@ -67,13 +86,15 @@
         @include mob-h2;
         white-space: nowrap;
         text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
         overflow: hidden;
-        line-clamp: 2;
-        // display: -webkit-box;
-        -webkit-box-orient: block-axis;
         text-align: left;
         width: 10rem;
         margin: .5rem 0;
+        @include tablet {
+            width: 10rem;
+        }
+
     }
 
     &__creator{

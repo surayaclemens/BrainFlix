@@ -3,6 +3,10 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/typography' as *;
 
+* {
+    box-sizing: border-box;
+    font-family: 'Avenir';
+}
 
 .header {
     margin-right: 0;
@@ -17,7 +21,7 @@
         justify-content: space-between;
         margin: 0 2rem;
         padding: 0 0 1rem 0;
-        width: 90%;
+        width: 85%;
     }
     // border: .5px solid rebeccapurple;
 

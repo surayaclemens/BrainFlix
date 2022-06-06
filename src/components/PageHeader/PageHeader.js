@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.scss'
+import './PageHeader.scss'
 import mainLogo from "../../../src/assets/images/BrainFlix-logo.svg";
 import userAvatar from "../../assets/images/Mohan-muruge.jpg";
 
-function Header(){
+function PageHeader(){
         return (
             <header className="header">
                 <Link to="/" className='header__logo-link'> <img className="header__logo" src={mainLogo} alt="brainflix logo"/></Link>
@@ -15,4 +15,4 @@ function Header(){
         )  
 }
 
-export default Header;
+export default PageHeader;

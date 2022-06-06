@@ -1,8 +1,8 @@
 import React from 'react';
-import './Hero.scss'
+import './HeroVideo.scss'
 
 
-function Hero(props) {
+function HeroVideo(props) {
 
     return (
         <section className='hero'>
@@ -14,4 +14,4 @@ function Hero(props) {
     )
 }
 
-export default Hero;
+export default HeroVideo;

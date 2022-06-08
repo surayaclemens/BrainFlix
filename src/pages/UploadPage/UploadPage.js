@@ -6,6 +6,8 @@ import {Link} from 'react-router-dom';
 
 function UploadPage() {
 
+  document.title="BrainFlix - Upload"
+      
   const handlePublish = (event) => {
       event.preventDefault()
       const form = event.target

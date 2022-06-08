@@ -4,7 +4,6 @@ import UserAvatar from "../../assets/images/Mohan-muruge.jpg";
 import CommentIcon from "../../assets/images/add_comment.svg";
 
 function Comments ({currentVideo}){
-    
     return (
     
         <section className="comments">
@@ -23,7 +22,7 @@ function Comments ({currentVideo}){
                 let commentDate = (parseInt(unixTime));
                 let formattedDate = new Date(commentDate).toLocaleDateString();
                 return (
-                    <div className='single-comment'>
+                    <div className='single-comment' key={comment.id}>
                         <div className='single-comment__info'>
                             <div className='single-comment__avatar'></div>
                             <div className='single-comment__post'>
@@ -33,8 +32,9 @@ function Comments ({currentVideo}){
                             <p className='single-comment__likes'>{comment.likes}</p>
                         </div>    
                         <p className='single-comment__text'>{comment.comment}</p>  
-                    </div>  
+                    </div> 
                 )
+            
             })}               
             </section>     
         )    

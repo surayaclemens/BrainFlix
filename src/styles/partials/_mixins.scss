@@ -47,8 +47,8 @@
     font-family: 'Avenir';
     font-weight: 700;
     text-transform: uppercase;
-    color: $white;
-    background-color: $brainflix-blue;
+    color: $cta-text;
+    background-color: $cta-main;
     border-radius: 4px;
     height: 40px;
     border: none;
@@ -80,7 +80,7 @@
     line-height: 1.125rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: $silver;
+    color: $secondary-text;
     font-family: 'Avenir';
 }
 

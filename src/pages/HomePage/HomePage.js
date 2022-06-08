@@ -22,6 +22,9 @@ class HomePage extends React.Component {
 
 // MOUNTING INITIAL VIDEO
 componentDidMount() {
+  
+    document.title="BrainFlix - Home"
+
 // fetching the data for videos list, set state to have the next videos list be filled with the array received from the data get
 // have to do this first so we have all video data, in order to get and use just the first one for currentVideo
     axios.get(videosURL+apiKey)
@@ -65,8 +68,7 @@ componentDidUpdate() {
           })
         })
         .catch(error => console.error(error))
-      }
-    
+      }  
 }
 
 

@@ -8,7 +8,7 @@ import Comments from '../../components/Comments/Comments';
 import NextVideos from '../../components/NextVideos/NextVideos';
 // DATA
 import axios from "axios";
-const videosURL = "http://localhost:8080/videos/";
+const videosURL = "http://localhost:8000/videos/";
 
 // START OF CLASS COMPONENT FOR HOME
 class HomePage extends React.Component {
@@ -37,15 +37,17 @@ componentDidMount() {
     // console.log(defaultVideo);
 
   // now getting the id of the 1st video (which we called defaultVideo above) and setting that url & video as the current one
-      axios.get(videosURL+defaultVideo)
+      if (defaultVideo!==undefined){
+        axios.get(videosURL+defaultVideo)
         .then(response => {
         this.setState({
               currentVideo: response.data
+            })
           })
-        })
-      })
-      .catch(error => console.error(error))
-}
+          .catch(error => console.error(error))
+      }})
+
+      }
 
 
 
@@ -62,7 +64,7 @@ componentDidUpdate() {
         })
         .catch(error => console.error(error))
       }
-  else if (this.state.currentVideo.id !== clickedVideoID) {
+  else if (this.state.currentVideo.id !== clickedVideoID && clickedVideoID!==undefined) {
       axios.get(videosURL+clickedVideoID)
         .then(response => {
           this.setState({
@@ -90,6 +92,7 @@ componentDidUpdate() {
     )
   }
 }
+
 
 export default HomePage;
 

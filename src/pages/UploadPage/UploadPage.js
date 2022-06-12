@@ -3,27 +3,34 @@ import './UploadPage.scss';
 import VideoThumbnail from "../../assets/images/Upload-video-preview.jpg"
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
-let videosURL = 'http://localhost:8080/videos';
+
+// videosURL = 'http://localhost:8000/videos';
 
 class UploadPage extends React.Component {
 
     state = {
         title: "",
         description: "",
+        clickedOn: false
     };
 
 //   document.title="BrainFlix - Upload"
-    
 // PUBLISH HANDLER
   handlePublish = (event) => {
     event.preventDefault()
-  
-    axios.post(videosURL, {
+
+    axios.post('http://localhost:8000/videos', {
         title: this.state.title,
         description: this.state.description
     })
+    .then(res => console.log(res))
     .catch(error => console.error(error))
+    this.setState({
+        clickedOn: true
+    })
+
   }
 
   //INPUT HANDLER
@@ -31,11 +38,18 @@ class UploadPage extends React.Component {
     this.setState({
         [ev.target.name]: ev.target.value,
     })
-    if (this.state.title && this.state.description) {
-        return alert("Upload successful!");
-    }
+ 
   }
     render(){
+        if (this.state.clickedOn){
+            return (
+                <div className='upload__modal'>
+                    <h1 className='upload__modal-title'>Video upload successful</h1>
+                    <Link className="namethis" to="/">Home</Link>
+                    <Link className="namethis" to="/upload">Go back</Link>
+                </div>
+            )
+        }
         return (
             <section className='upload'>
                 <h1 className='upload__header'>Upload video</h1>
@@ -63,7 +77,7 @@ class UploadPage extends React.Component {
                         <div className='buttons'>
                                 <button 
                                 type="submit"
-                                className="buttons__publish"><Link to={"/"} className='publish__link'>Publish</Link></button>
+                                className="buttons__publish">Publish</button>
                             <button className="buttons__cancel">Cancel</button>
                         </div>
                     </form>

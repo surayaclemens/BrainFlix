@@ -14,18 +14,25 @@
     align-items: flex-start;
     border-top: 1px solid $line-light;
     
-    &__line{
+    &__modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+    }
+
+    &__modal-title{
+    text-align: center;
+    margin: 4rem 0;
+    }
+
+    &__modal-link{
+        @include labels-buttons;
+        padding-top: .65rem;
         @include tablet {
-            border: 0.5px solid $line-light;
-            width: 90%;
-            position: relative;
-            bottom: 6rem;
-            right: .5rem;
+            width: 50%;
         }
         @include desktop {
-        border: 0.5px solid $line-light;
-        width: 61.5rem;
-        margin: 2rem 0 0 8rem;
+            width: 30%;
         }
     }
 
@@ -41,6 +48,7 @@
         }
         @include desktop {
             margin-left: 8rem;
+            width: 85%;
         }
     }
 
@@ -58,13 +66,14 @@
     }
 
     &__container{
-        
         @include desktop {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            width: 90%;
-            margin: 0 6rem;
+            width: 85%;
+            margin: 0 8rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $line-light;
         }
     }
 
@@ -93,6 +102,7 @@
         @include desktop {
             width: 30rem;
             height: 11.6rem;
+            margin-left: 0;
         }
     }
 
@@ -106,7 +116,6 @@
             width: 100%;
             height: 10rem;
         }
-
     }
 
     &__title-input{
@@ -187,7 +196,13 @@
             @include tablet {
                 width: 30%;
             }
-        }   
+        } 
+        &__cancel-link{
+            text-decoration: none;
+            &:visited{
+                color: $cta-main;
+            }
+        }
     }
 
     .publish__link{

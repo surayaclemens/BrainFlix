@@ -16,7 +16,7 @@
     &__header{
         @include mob-h3;
         margin: 1rem;
-        border-top: 1px solid $mercury;
+        border-top: 1px solid $line-light;
         width: 100%;
         text-align: left;
         padding-top: 1rem;
@@ -52,9 +52,9 @@
         align-items: center;
         text-decoration: none;
         width: 20rem;
-        color: $brainflix-black;
+        color: $primary-text;
         &:visited{
-            color: $brainflix-black;
+            color: $primary-text;
         }
     }
 
@@ -62,7 +62,7 @@
         width: 6.6rem;
         height: 3.8rem;
         overflow: hidden;
-        background-color: $mercury;
+        background-color: $line-light;
         border-radius: 4px;
     }
 

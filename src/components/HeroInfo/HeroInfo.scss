@@ -26,8 +26,8 @@
     }
 }
 &__metadata {
-    border-top: 1px solid $mercury;
-    border-bottom: 1px solid $mercury;
+    border-top: 1px solid $line-light;
+    border-bottom: 1px solid $line-light;
     display: flex;
     justify-content: space-between;
     margin: 1rem;
@@ -84,12 +84,12 @@
     }
     &__date {
         @include mob-body;
-        color: $silver;
+        color: $secondary-text;
     }
     &__counters {
         margin-right: 2rem;
         @include mob-body;
-        color: $silver;
+        color: $secondary-text;
         display: flex;
         flex-direction: column;
         @include tablet{

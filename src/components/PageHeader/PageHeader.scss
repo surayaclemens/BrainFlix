@@ -37,20 +37,20 @@
         background-image: url("../../assets/images/search.svg");
         background-repeat: no-repeat;
         background-position: 10px 10px;
-        background-color: $alabaster;
+        background-color: $form-background;
         padding-left: 1rem;
         width: 73%;
         height: 36px;
         border-radius: 4px;
-        border: 1px solid $mercury;
+        border: 1px solid $line-light;
         order: 2;
         &:focus{
             outline: none;
-            border: 2px solid $brainflix-blue;
+            border: 2px solid $cta-main;
         }
         &::placeholder{
             padding-left: 1rem;
-            color: $brainflix-black;
+            color: $primary-text;
             @include mob-body;
         }
         @include tablet {
@@ -64,7 +64,7 @@
 
     &__upload-button{
         margin: 0 0 1rem 0;
-        background-color: $brainflix-blue;
+        background-color: $cta-main;
         background-image: url("../../assets/images/upload.svg");
         @include labels-buttons;
         order: 4;

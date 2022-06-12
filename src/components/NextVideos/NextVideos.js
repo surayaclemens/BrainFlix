@@ -1,7 +1,6 @@
 import React from 'react';
 import './NextVideos.scss';
 import { Link } from 'react-router-dom';
-// import NextVideos from './components/NextVideos/NextVideos';
 
 function NextVideos({nextVideos}) {
 

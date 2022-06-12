@@ -16,7 +16,7 @@
         width: 100%;
         margin: 0;
         @include tablet{
-            background-color: black;
+            background-color: $dark-background;
             max-height: 25rem;
         }
         @include desktop {

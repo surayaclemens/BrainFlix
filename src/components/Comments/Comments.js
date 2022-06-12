@@ -22,7 +22,7 @@ function Comments ({currentVideo}){
                 let commentDate = (parseInt(unixTime));
                 let formattedDate = new Date(commentDate).toLocaleDateString();
                 return (
-                    <div className='single-comment' key={comment.id}>
+                    <div key={comment.timestamp} className='single-comment'>
                         <div className='single-comment__info'>
                             <div className='single-comment__avatar'></div>
                             <div className='single-comment__post'>

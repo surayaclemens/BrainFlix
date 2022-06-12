@@ -5,8 +5,6 @@ import PageHeader from './components/PageHeader/PageHeader';
 import HomePage from './pages/HomePage/HomePage';
 import UploadPage from './pages/UploadPage/UploadPage';
 
-const apiKey="?api_key=cdff3da8-3977-4bd0-85aa-9be24d0a1367";
-
 
 class App extends React.Component {
   componentDidMount(){

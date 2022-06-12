@@ -8,8 +8,7 @@ import Comments from '../../components/Comments/Comments';
 import NextVideos from '../../components/NextVideos/NextVideos';
 // DATA
 import axios from "axios";
-const videosURL = "https://project-2-api.herokuapp.com/videos/";
-const apiKey = "?api_key=cdff3da8-3977-4bd0-85aa-9be24d0a1367";
+const videosURL = "http://localhost:8080/videos/";
 
 // START OF CLASS COMPONENT FOR HOME
 class HomePage extends React.Component {
@@ -27,7 +26,7 @@ componentDidMount() {
 
 // fetching the data for videos list, set state to have the next videos list be filled with the array received from the data get
 // have to do this first so we have all video data, in order to get and use just the first one for currentVideo
-    axios.get(videosURL+apiKey)
+    axios.get(videosURL)
         .then(response => {
         this.setState({
               nextVideos: response.data
@@ -35,23 +34,27 @@ componentDidMount() {
 
   // store the first video (targeted by ID) in a variable so it can be used for default video
     const defaultVideo = response.data[0].id;
+    // console.log(defaultVideo);
 
   // now getting the id of the 1st video (which we called defaultVideo above) and setting that url & video as the current one
-      axios.get(videosURL+defaultVideo+apiKey)
+      axios.get(videosURL+defaultVideo)
         .then(response => {
         this.setState({
               currentVideo: response.data
           })
         })
-    })
+      })
+      .catch(error => console.error(error))
 }
+
+
 
 // UPDATE TO NEW VID
 componentDidUpdate() {
   const clickedVideoID = this.props.match.params.videoID;
 
   if (this.props.match.path==="/" && this.state.currentVideo.id !== this.state.nextVideos[0].id) {
-    axios.get(videosURL+this.state.nextVideos[0].id+apiKey)
+    axios.get(videosURL+this.state.nextVideos[0].id)
         .then(response => {
           this.setState({
             currentVideo: response.data
@@ -60,9 +63,8 @@ componentDidUpdate() {
         .catch(error => console.error(error))
       }
   else if (this.state.currentVideo.id !== clickedVideoID) {
-      axios.get(videosURL+clickedVideoID+apiKey)
+      axios.get(videosURL+clickedVideoID)
         .then(response => {
-          // console.log(response)
           this.setState({
             currentVideo: response.data
           })
